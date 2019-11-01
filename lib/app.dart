@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui_clone/screens/main_page.dart';
 import 'package:whatsapp_ui_clone/screens/splash_screen.dart';
 
 class App extends StatelessWidget {
@@ -21,7 +22,33 @@ class App extends StatelessWidget {
         primarySwatch: Colors.green,
         
       ),
-      home: MyHomePage(title: 'WhatsApp Clone'),
+      // home: MyHomePage(title: 'WhatsApp Clone'),
+      onGenerateRoute: _pageRoutes(),
     );
   }
+}
+
+//Defined Routes
+const SplashScreenRoute = '/';
+const MainPageRoute = '/main_page';
+
+//Routes Factory
+RouteFactory _pageRoutes(){
+  return(settings){
+    final Map<String, dynamic> arguments = settings.arguments;
+    Widget screen;
+    switch(settings.name){
+      case MainPageRoute:
+        screen = MainPage();
+        break;
+      case SplashScreenRoute:
+        screen = SplashScreen();
+        break;
+      default:
+        return null;
+    }
+    return MaterialPageRoute(
+      builder: (BuildContext context) => screen
+    );
+  };
 }

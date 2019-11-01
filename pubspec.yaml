@@ -48,6 +48,7 @@ flutter:
    - assets/images/image3.jpg
    - assets/images/image4.jpg
    - assets/images/image5.jpg
+   - assets/images/whatsapp-logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
