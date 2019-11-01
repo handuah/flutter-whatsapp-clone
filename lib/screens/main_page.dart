@@ -29,43 +29,55 @@ class MainPage extends StatelessWidget {
            ],
          ),
        ),
-       body: ListView(
-         scrollDirection: Axis.vertical,
+       body: TabBarView(
          children: <Widget>[
-           Container(
-            //  padding: EdgeInsets.all(2.0),
-           // child: 
-          //Row(
-             
-          //    crossAxisAlignment: CrossAxisAlignment.start,
-          //    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //    children: <Widget>[
-          //      CircleAvatar(
-          //        backgroundImage: AssetImage('assets/images/image1.jpg'),
-          //      ),
-          //      Column(
-          //        children: <Widget>[
-          //          Text('Hannah'),
-          //          Text('I love you')
-          //        ],
-          //      ),
-          //      Text('3:45pm')
-          //    ],
-          //  )
-
-          child: Card(
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/image1.jpg'),
+           ListView(
+             scrollDirection: Axis.vertical,
+             children: <Widget>[
+               Card(
+                 child: ListTile(
+                   leading: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/image1.jpg'),
+                    ),
+                  title: Text('Hannah Duah'),
+                  subtitle: Text('I love you'),
+                  trailing: Text("14:24"),
+                 ),
                 ),
-              title: Text('Hannah Duah'),
-              subtitle: Text('I love you'),
-              trailing: Text("14:24"),
-            ),
-          ),
+             ],
+           ),
+           ListView(
+             scrollDirection: Axis.vertical,
+             children: <Widget>[
+               Card(
+                 child: ListTile(
+                   leading: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/image1.jpg'),
+                    ),
+                  title: Text('Hannah Duah'),
+                  subtitle: Text('I love you'),
+                  trailing: Text("14:24"),
+                 ),
+                ),
+             ],
+           ),
+           ListView(
+             scrollDirection: Axis.vertical,
+             children: <Widget>[
+               Card(
+                 child: ListTile(
+                   leading: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/image1.jpg'),
+                    ),
+                  title: Text('Hannah Duah'),
+                  subtitle: Text('I love you'),
+                  trailing: Text("14:24"),
+                 ),
+                ),
+             ],
            ),
          ],
-         ),
+       ),
     ),
     );
   }
