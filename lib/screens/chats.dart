@@ -91,7 +91,30 @@ Card sentMessage(String messageSent){
                   sentMessage("I am so sorry I was late for the dinner. Want to make up to me later?. love you"),
                 ],
               ),
+
+              // Positioned(
+              //   top: 20.0,
+              //   child: Container(
+              //     height: 5.0,
+              //     width: 20.0,
+              //     child: Row(
+              //       children: <Widget>[
+              //         IconButton(
+              //         icon: Icon(Icons.face),
+              //         onPressed:(){} ,
+              //         ),
+              //         // TextField(
+              //         //   textAlign: TextAlign.left,
+              //         //   showCursor: true,
+              //         //   // expands: true,
+                        
+              //         // )
+              //       ], 
+              //     ),
+              //   ),
+              // ),
             ],
+           
           ),
       ),
 
