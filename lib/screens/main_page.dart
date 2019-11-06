@@ -4,20 +4,25 @@ import 'chats.dart';
 
 class MainPage extends StatelessWidget {
 
-  Card myChatSummary(String imagePath, String userName, String recentText, String timeOfMessage){
+  Container myChatSummary(String imagePath, String userName, String recentText, String timeOfMessage){
     
-    return  Card(
-          
-          child: ListTile(
-          leading: CircleAvatar(
-          backgroundImage: AssetImage(imagePath),
-          ),
-        title: Text(userName),
-        subtitle: Text(recentText),
-        trailing: Text(timeOfMessage),
-        ),
-        );
-   
+    return Container(
+            padding: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(width: 2.0, color: Colors.grey[200])
+              ),
+            ),
+            child: ListTile(
+                leading: CircleAvatar(
+                backgroundImage: AssetImage(imagePath),
+                ),
+              title: Text(userName),
+              subtitle: Text(recentText),
+              trailing: Text(timeOfMessage),
+                )
+              );
+    
   }
   @override
   Widget build(BuildContext context) {
