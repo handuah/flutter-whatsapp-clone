@@ -82,8 +82,11 @@ class MainPage extends StatelessWidget {
                 ),
              ],
            ),
+           
          ],
+        
        ),
+       
     ),
     );
   }
@@ -124,27 +127,4 @@ class ChatSummaryWidget extends StatelessWidget {
               );
   }
 }
-// Container myChatSummary(String imagePath, String userName, String recentText, String timeOfMessage){
-//     BuildContext context;
-//     return Container(
-//             padding: EdgeInsets.all(10.0),
-//             decoration: BoxDecoration(
-//               border: Border(
-//                 bottom: BorderSide(width: 2.0, color: Colors.grey[200])
-//               ),
-//             ),
-//             child: ListTile(
-//                 leading: CircleAvatar(
-//                 backgroundImage: AssetImage(imagePath),
-//                 ),
-//               title: Text(userName),
-//               subtitle: Text(recentText),
-//               trailing: Text(timeOfMessage),
-//               onTap: (){
-//                 Navigator.push(context, MaterialPageRoute(builder: (context) => Chats()));
-//               },
-//                 ),
-                
-//               );
-    
-//   }
+

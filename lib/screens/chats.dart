@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+
 
 class Chats  extends StatelessWidget {
 
@@ -24,6 +23,48 @@ Card sentMessage(String messageSent){
   );
 }
 
+Widget messageBar(){
+  return Container(
+    height: 60.0,
+    width: 350.0,
+    padding: EdgeInsets.only(left: 5.0, right: 5.0),
+    margin: EdgeInsets.symmetric(horizontal: 5.0),
+    // color: Colors.white,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(50.0),
+      color: Colors.yellow[100],
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.only(left: 10.0, right: 5.0),
+          width: 270.0,
+          // child:  SingleChildScrollView(
+            child: TextField(
+                decoration: InputDecoration(
+                hintText: 'Type your message',
+                icon: Icon(Icons.face, color: Colors.grey),
+            ),
+            ),
+          // ),
+
+        ),
+        Container(
+          padding: EdgeInsets.only(right: 20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Icon(Icons.attach_file, color: Colors.grey,),
+              Icon(Icons.add_a_photo, color: Colors.grey,),
+            ],
+          ),
+        ),
+      ],
+    ),
+    );
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +81,7 @@ Card sentMessage(String messageSent){
               ],
               ),
               ),
-        actions: <Widget>[
+              actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.add_call),
                 onPressed: (){},
@@ -50,25 +91,7 @@ Card sentMessage(String messageSent){
               onPressed: (){},
               ),
         ],
-        // bottom: BottomNavigationBar(
-        //   child: Container(
-        //   // height: 40.0,
-        //   child: Row(
-        //   children: <Widget>[
-        //     IconButton(
-        //       icon: Icon(Icons.face),
-        //       onPressed: (){},
-        //     ),
-        //     TextField(
-        //       showCursor: true,
-        //       cursorColor: Colors.grey,
-        //       keyboardType: TextInputType.text,
-        //     ),
-        //   ],
-        // ),
-        // ), 
-        // ),
-       ),
+      ),
       body: Container(
           child: Stack(
             children: <Widget>[
@@ -88,33 +111,20 @@ Card sentMessage(String messageSent){
                   sentMessage("Do not worry, I understand you are busy. Love you too"),
                   receivedMessage("I am so sorry I was late for the dinner. Want to make up to me later?. love you"),
                   receivedMessage("I am so sorry I was late for the dinner. Want to make up to me later?. love you"),
+                  sentMessage("Do not worry, I understand you are busy. Love you too"),
+                  receivedMessage("I am so sorry I was late for the dinner. Want to make up to me later?. love you"),
+                  receivedMessage("I am so sorry I was late for the dinner. Want to make up to me later?. love you"),
                   sentMessage("I am so sorry I was late for the dinner. Want to make up to me later?. love you"),
+                  // messageBar(),
                 ],
+                
               ),
-
-              // Positioned(
-              //   top: 20.0,
-              //   child: Container(
-              //     height: 5.0,
-              //     width: 20.0,
-              //     child: Row(
-              //       children: <Widget>[
-              //         IconButton(
-              //         icon: Icon(Icons.face),
-              //         onPressed:(){} ,
-              //         ),
-              //         // TextField(
-              //         //   textAlign: TextAlign.left,
-              //         //   showCursor: true,
-              //         //   // expands: true,
-                        
-              //         // )
-              //       ], 
-              //     ),
-              //   ),
-              // ),
+              Positioned(
+                top: 450.0,
+                child: messageBar(),
+              )
             ],
-           
+          
           ),
       ),
 
@@ -122,3 +132,4 @@ Card sentMessage(String messageSent){
     );
   }
 }
+
